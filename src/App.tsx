@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FileText, Table as TableIcon, ShieldCheck } from 'lucide-react';
+import { FileText, Table as TableIcon, ShieldCheck, LogOut } from 'lucide-react';
 import FormPage from './components/FormPage';
 import TablePage from './components/TablePage';
 import { Transaction } from './types';
@@ -57,6 +57,13 @@ export default function App() {
                 <TableIcon className="w-4 h-4" />
                 Rekapitulasi
               </button>
+              <button
+                onClick={() => window.location.href = 'https://rw-015.vercel.app/'}
+                className="flex items-center gap-2 px-5 py-2.5 rounded-xl font-medium transition-all text-red-600 hover:bg-red-50 hover:text-red-700"
+              >
+                <LogOut className="w-4 h-4" />
+                Logout
+              </button>
             </nav>
           </div>
         </div>
@@ -86,6 +93,13 @@ export default function App() {
           >
             <TableIcon className="w-4 h-4" />
             Rekap
+          </button>
+          <button
+            onClick={() => window.location.href = 'https://rw-015.vercel.app/'}
+            className="flex-1 flex justify-center items-center gap-2 py-3 rounded-lg font-medium text-sm transition-colors text-red-600 hover:bg-red-50"
+          >
+            <LogOut className="w-4 h-4" />
+            Logout
           </button>
         </div>
       </div>
